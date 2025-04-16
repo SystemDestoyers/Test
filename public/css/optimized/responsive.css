@@ -1,0 +1,864 @@
+/**
+ * RESPONSIVE STYLES
+ * This file contains all responsive styles for the site
+ * Organized by breakpoints and sections
+ * 
+ * Note: The navbar animation (fadeInFromTop) is defined in style.css
+ */
+
+/* ==========================================
+   DEFAULT STYLES (Applied to all screen sizes)
+   ========================================== */
+
+/* Hide "Let's Talk" button in services menu by default (for larger screens) */
+.heading .services-menu .btn-talk {
+    display: none;
+}
+
+/* ==========================================
+   EXTRA LARGE SCREENS (max-width: 1600px)
+   ========================================== */
+
+@media (max-width: 1600px) {
+    /* Container Size */
+    .container {
+        max-width: 1400px !important;
+    }
+
+    /* About Section - Large Desktop */
+    .about-section .section-title span {
+        font-size: 9rem;
+    }
+    
+    .about-image-main {
+        width: 580px;
+        height: 340px;
+    }
+    
+    .about-image-secondary {
+        width: 310px;
+        height: 380px;
+    }
+    .about-section .about-heading img {
+        left: 16rem;
+    }
+}
+
+/* ==========================================
+   LARGE SCREENS (max-width: 1400px)
+   ========================================== */
+
+@media (max-width: 1400px) {
+    /* Header Elements */
+    .main-heading {
+        font-size: 3.5rem;
+    }
+    
+    .services-menu h3 {
+        font-size: 2.25rem;
+    }
+    
+    .service-list li {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-right: 4rem;
+    }
+
+    /* Service Images */
+    .service-image {
+        height: 800px;
+        margin-top: 110px;
+    }
+
+    /* About Section - Medium Desktop */
+    .about-section {
+        margin-top: 100px;
+    }
+    
+    .about-section .section-title span {
+        font-size: 8rem;
+    }
+    
+    .about-text {
+        font-size: 2rem;
+        max-width: 1200px;
+    }
+    
+    .about-image-main {
+        width: 550px;
+        height: 320px;
+    }
+    .about-section .about-heading img {
+        left: 200px;
+    }
+    
+    .about-image-secondary {
+        width: 300px;
+        height: 350px;
+        top: 40px;
+    }
+    
+    .about-main-description {
+        padding-top: 2rem;
+    }
+}
+
+/* ==========================================
+   MEDIUM SCREENS (max-width: 1200px)
+   ========================================== */
+
+@media (max-width: 1200px) {
+    /* About Section - Small Desktop */
+    .about-section {
+        margin-top: 80px;
+        padding: 20px 0 60px;
+    }
+    
+    .about-section .section-title span {
+        font-size: 7rem;
+        top: -0.4em;
+    }
+    
+    .about-text {
+        font-size: 1.75rem;
+        max-width: 992px;
+    }
+    
+    .about-text-container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about-image-wrapper {
+        height: 450px;
+    }
+    
+    .about-image-main {
+        width: 480px;
+        height: 280px;
+    }
+    
+    .about-image-secondary {
+        width: 260px;
+        height: 310px;
+        top: 30px;
+    }
+    
+    .about-description {
+        font-size: 1rem;
+    }
+    
+    .about-main-description {
+        padding-top: 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================
+   SMALL SCREENS (max-width: 992px)
+   ========================================== */
+
+@media (max-width: 992px) {
+    /* Header Elements */
+    .main-heading {
+        font-size: 2.5rem;
+        max-height: none;
+        padding-top: 1rem;
+    }
+    
+    .header-image {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        height: 500px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .services-menu {
+        margin-top: 2rem;
+    }
+    
+    .services-menu h3 {
+        font-size: 2.25rem;
+    }
+    
+    /* Button Styles */
+    .navbar-collapse .btn-talk {
+        display: none; /* Hide the button in navbar */
+    }
+    
+    /* Show button in services menu on small screens */
+    .heading .services-menu .btn-talk {
+        display: flex;
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    /* Add button after services menu */
+    .heading .services-menu::after {
+        content: "";
+        display: block;
+        margin-top: 1.5rem;
+    }
+    
+    /* Navigation */
+    .navbar {
+        position: relative;
+        z-index: 1050;
+    }
+    
+    .navbar-collapse {
+        background-color: var(--light-color);
+        padding: 1rem;
+        border-radius: 0 0 5px 5px;
+        /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        z-index: 1050;
+    }
+    
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        z-index: 1050;
+        width: 100%;
+        transition: all 0.3s ease;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .logo {
+        width: 180px;
+        height: auto;
+    }
+    
+    /* Carousel */
+    #headerCarousel, 
+    #headerCarousel .carousel-inner, 
+    #headerCarousel .carousel-item {
+        height: 100%;
+        min-height: 400px;
+    }
+
+    /* Service Images */
+    .service-image {
+        height: 600px;
+        min-height: 400px;
+    }
+
+    /* About Section - Tablet Landscape */
+    .about-section {
+        margin-top: 60px;
+        padding: 20px 0 40px;
+    }
+    
+    .about-section .section-title {
+        font-size: 3rem;
+    }
+    
+    .about-section .section-title span {
+        font-size: 5rem;
+        top: -0.3em;
+        left: 0.2em;
+    }
+    
+    .about-text {
+        font-size: 1.5rem;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .about-image-container {
+        margin-top: 0;
+        margin-bottom: 3rem;
+        height: auto;
+        /* min-height: 400px; */
+    }
+    
+    .about-image-wrapper {
+        height: 400px;
+    }
+    
+    .about-image-main {
+        float: none;
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    
+    .about-image-secondary {
+        position: absolute;
+        width: 70%;
+        max-width: 350px;
+        height: 250px;
+        left: 50%;
+        top: -50px;
+        transform: translateX(-50%);
+    }
+    
+    .about-main-description {
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
+
+/* ==========================================
+   SMALL DEVICES COMMON (max-width: 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Scroll Indicator */
+    .scroll-indicator-container {
+        display: none;
+    }
+
+    /* Navigation */
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+        top: 70px;
+        max-height: 70vh;
+    }
+
+    /* Footer Adjustments */
+    .social-links {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .copyright {
+        margin-bottom: 10px;
+    }
+
+    /* About Section - Tablet */
+    .about-section {
+        margin-top: 40px;
+    }
+    
+    .about-section .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-section .section-title span {
+        font-size: 4rem;
+        top: -0.2em;
+    }
+    
+    .about-text {
+        font-size: 1.5rem;
+    }
+    
+    .about-image-container {
+        min-height: 350px;
+    }
+
+    .about-section .about-heading img {
+        width: 15.5rem;
+        height: 4.5rem;
+        left: 155px;
+    }
+    
+    .about-image-main {
+        height: 250px;
+        width: 93%;
+        float: right;
+    }
+
+    .about-image-main img {
+        width: 100%;
+        height: 85%;
+    }
+    
+    .about-image-secondary {
+        height: 220px;
+        top: -40px;
+    }
+
+    .about-image-secondary img {
+        position: absolute;
+        width: 57%;
+        height: 68%;
+        object-fit: fill;
+        left: -44px;
+        top: 27px;
+    }
+    
+    .about-text-container {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-image-wrapper {
+        height: 315px;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES (max-width: 576px)
+   ========================================== */
+
+@media (max-width: 576px) {
+    /* Mobile viewport height fix */
+    html {
+        height: -webkit-fill-available;
+    }
+    
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    
+    /* 
+     * Header Elements - Mobile Specific Adjustments
+     * Applied to both Blade templates and Vue components
+     */
+    .main-heading,
+    .heading .main-heading {
+        font-size: 1.7rem;
+        padding: 0;
+        height: 11%;
+        position: absolute;
+        z-index: 10;
+        /* background-color: rgba(255, 255, 255, 0.4); */
+        /* backdrop-filter: blur(2px); */
+        width: 80%;
+        left: 8%;
+        top: 25%;
+        /* border-radius: 15px; */
+        /* box-shadow: 0 2px 10px rgb(0 0 0); */
+        /* text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5); */
+        color: #ffffff;
+        overflow: visible;
+    }
+    
+    /* Adjust main heading position for Vue subpages */
+    body[data-vue-app]:not([data-route="/"]) .main-heading,
+    body[data-vue-app]:not([data-route="/"]) .heading .main-heading {
+        top: 25%;
+        font-size: 1.6rem;
+    }
+    
+    .heading .heading-text {
+        /*top: -21px;*/
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(0.1px);
+        padding: 3px 10px;
+        border-radius: 15px;
+    }
+    
+    .heading .left-col {
+        height: 453px !important;
+        padding-top: 15px;
+    }
+    
+    /* Contact Section - Mobile Adjustments */
+    .contact-section {
+        padding-top: 0;
+    }
+    
+    .contact-top {
+        margin-bottom: 30px;
+    }
+    
+    .contact-section .let-talk {
+        font-weight: 400;
+    }
+    
+    /* Hide the educational services section on mobile - but ONLY in Blade templates, not Vue */
+    body:not([data-vue-app]) #educational-section, 
+    body:not([data-vue-app]) .educational-services {
+        display: none;
+    }
+    
+    /* 
+     * Services Menu - Mobile Optimization
+     * Applied to both Blade templates and Vue components
+     */
+    .heading .services-menu,
+    .services-menu {
+        margin-top: 0;
+    }
+    
+    /* Vue-specific services menu adjustment */
+    body[data-vue-app] .heading .services-menu,
+    body[data-vue-app] .services-menu {
+        margin-top: 2rem;
+    }
+    
+    .heading .services-menu h3,
+    .services-menu h3 {
+        margin: 0;
+        font-size: 2.4rem;
+        font-weight: 400;
+    }
+    
+    .heading .service-list li,
+    .service-list li {
+        font-size: 1.2rem !important;
+        font-weight: 400;
+        padding-bottom: 0.6rem;
+    }
+    
+    /* Button Optimization for Mobile */
+    .heading .services-menu .btn-talk,
+    .services-menu .btn-talk {
+        margin-top: 1rem;
+    }
+    
+    /* Carousel Navigation */
+    .nav-number {
+        font-size: 20px;
+        margin: 0 5px;
+    }
+    
+    .nav-line {
+        width: 30px;
+    }
+    
+    .carousel-nav-numbers {
+        left: 10px;
+        bottom: 10px;
+        padding: 5px 10px;
+    }
+    
+    /* Logo and Navigation */
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+    
+    .navbar {
+        min-height: 80px;
+        padding: 0;
+    }
+    
+    .navbar-collapse {
+        top: 80px;
+    }
+    
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+        top: 80px;
+        max-height: 80vh;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 1.25rem;
+    }
+    
+    /* Header Images */
+    .header-image {
+        height: 100%;
+        margin-bottom: 0;
+    }
+    
+    /* Header carousel size */
+    #headerCarousel,
+    #headerCarousel .carousel-inner,
+    #headerCarousel .carousel-item {
+        height: 40vh;
+        min-height: 100%;
+    }
+    
+    /* Subpage header height */
+    .static-header-image {
+        height: 30vh;
+    }
+    
+    /* Static header image fix */
+    .static-header-image img {
+        min-height: 100%;
+    }
+    
+    /* Header Main Carousel - Mobile Adjustments */
+    .header-main-carousel {
+        margin-bottom: 0 !important;
+    }
+    
+    /* #headerCarousel, 
+    #headerCarousel .carousel-inner, 
+    #headerCarousel .carousel-item {
+        min-height: 350px;
+    } */
+
+    /* Footer - Social Links and Copyright */
+    .social-links {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 25px;
+    }
+    
+    .social-link i {
+        margin-right: 8px;
+    }
+    
+    .copyright {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 15px 0;
+    }
+    
+    .end-footer .row {
+        flex-direction: column;
+    }
+    
+    .end-footer .d-flex {
+        flex-direction: column !important;
+    }
+    
+    .end-footer .justify-content-between {
+        justify-content: center !important;
+    }
+    
+    .end-footer .align-items-center {
+        align-items: center !important;
+        margin-top: 10px;
+    }
+
+    /* Service Images */
+    .service-image {
+        height: 400px;
+        min-height: 400px;
+    }
+    
+    /* Service Section Layout - Title at Top */
+    .service-stack-item .row {
+        flex-direction: column;
+    }
+    
+    .service-content .title {
+        position: absolute;
+        top: -525px;
+        left: 10px;
+        z-index: 5;
+        display: flex
+;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
+        width: 100%;
+        /* background-color: rgba(255, 255, 255, 0.8); */
+        padding: 10px;
+        /* backdrop-filter: blur(2px); */
+        border-radius: 4px;
+    }
+    
+    .service-content .service-number {
+        font-size: 5.5rem;
+        margin-right: 6px;
+        margin-bottom: 0;
+        line-height: 1;
+        order: 1;
+        opacity: 1;
+    }
+    
+    .service-content .section-title {
+        display: none;
+    }
+    
+    .service-content .service-title {
+        font-size: 1.9rem;
+        margin-bottom: 0;
+        line-height: 1.2;
+        order: 2;
+        display: inline-flex;
+        position: absolute;
+        top: -503px;
+        left: 130px;
+        color: var(--dark-color);
+        font-weight: 600;
+    }
+    
+    .service-stack-item .col-lg-6:first-child {
+        order: 1;
+        order: 1;
+        width: 100%;
+        height: 483px !important;
+        margin-top: 15px;
+    }
+    
+    .service-stack-item .col-lg-6:last-child {
+        order: 2;
+        margin-top: 20px; /* Add space below the image */
+    }
+    
+    .service-content {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .services-section .main-content {
+        padding: 0;
+    }
+
+    /* About Section - Mobile */
+    .about-section {
+        margin-top: 30px;
+        padding: 15px 0 30px;
+    }
+    
+    .about-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .about-section .section-title span {
+        font-size: 3rem;
+        opacity: 0.08;
+    }
+
+    .about-section .about-heading img {
+        width: 17.5rem;
+        height: 3.8rem;
+        left: 103px;
+        top: 44px;
+    }
+    
+    .about-text {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+    
+    .about-image-container {
+        min-height: 300px;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .about-image-main {
+        height: 230px;
+        width: 85%;
+        float: right;
+        overflow: hidden;
+    }
+
+    .about-image-main img {
+        width: 100%;
+        height: 90%;
+    }
+    
+    .about-image-secondary {
+        width: 80%;
+        height: 192px;
+        top: -30px;
+        position: relative;
+        overflow: visible;
+    }
+
+    .about-image-secondary img {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        object-fit: fill;
+        left: -208px;
+        top: 62px;
+    }
+    
+    /* About page specific styles (different from homepage) */
+    .sub-page .about-image-secondary {
+        width: 80%;
+        top: -38px;
+        left: 361px;
+    }
+    
+    .sub-page .about-image-secondary img {
+        left: -45px;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+    
+    .about-text-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-image-wrapper {
+        height: 290px;
+    }
+
+    /* Sub-page margin fix */
+    .sub-page {
+        margin-top: 0;
+    }
+
+    /* Section padding reset */
+    section {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* Service Section Layout - Mobile-specific styles */
+    .main-content .service-buttons {
+        margin-top: 0;
+    }
+    
+    .main-content .service-description {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+        min-height: 150px;
+        margin-top: 20px;
+    }
+    
+    .service-stack-item .row {
+        flex-direction: column;
+    }
+
+
+    /* Fix service content word wrapping */
+    .service-item .service-content-wrapper {
+        white-space: normal !important;
+        /* overflow-wrap: break-word; */
+        /* word-wrap: break-word; */
+        /* word-break: break-word; */
+        margin-left: 15px;
+    }
+    
+    /* Active service description styling */
+    .service-item.active .service-desc,
+    .service-desc,
+    .service-description {
+        font-size: 1.3rem !important;
+        margin-bottom: 0;
+        line-height: 1.7rem;
+        padding: 8px;
+    }
+    
+    /* Service Content Adjustments */
+    .service-text-content {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .service-hero-section .service-list li {
+        padding-bottom: 0 !important;
+    }
+    
+    section.service-hero-section .row {
+        padding: 0 !important;
+    }
+}

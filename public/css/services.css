@@ -1,0 +1,276 @@
+/* 
+ * Services CSS - Styling for all service pages
+ * Formerly education-scholarship.css
+ */
+
+.header-image {
+    max-height: 550px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.heading .left-col {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-heading {
+    font-size: 3rem;
+    padding-top: 0px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1px;
+    /* letter-spacing: 1px; */
+    /* margin-bottom: 1rem; */
+}
+.heading-text {
+    top: 0;
+}
+.heading .services-menu {
+    margin-top: 0;
+}
+.heading .services-menu h3{
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+.heading .service-list li {
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+    /* line-height: 1px; */
+    color: var(--dark-color);
+}
+.sub-page {
+    margin-top: 50px;
+}
+.educational-services .service-name, .service-item.active .service-name {
+    padding: 0;
+    float: inline-end;
+    color: var(--dark-color)
+}
+.service-item {
+    margin-bottom: 0;
+    border: none;
+}
+.educational-services {
+    padding: 0;
+}
+
+.service-item {
+    padding: 0;
+}
+.service-item .head-content {
+    align-items: flex-start;
+    align-content: center;
+    padding-left: 0;
+}
+
+.service-item .service-content-wrapper {
+    display: inline-block;
+    /* white-space: nowrap; */
+    float: left;
+    padding-bottom: 0;
+
+}
+
+.service-content-wrapper h4 {
+    display: inline;
+    margin-right: 1rem;
+}
+
+/* Service text content styling */
+.service-text-content {
+    padding: 30px 25px;
+    height: 100%;
+    width: 85%;
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* .service-text-content:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background-color: rgba(249, 249, 249, 0.8);
+} */
+
+/* Standardizing all text elements inside service-text-content */
+.service-text-content h2 {
+    margin-bottom: 1.3rem;
+    font-size: 2.3rem;
+    color: var(--dark-color);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.service-text-content h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+.service-text-content h5 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--dark-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Make p and ul have the same styling */
+.service-text-content p,
+.service-text-content ul,
+.service-text-content .service-list,
+.service-text-content li {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: var(--dark-color);
+    font-weight: 300;
+}
+
+.service-text-content ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Convert h4 to match h5 styling */
+.service-text-content h4 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+/* Convert any other elements to match paragraph styling */
+.service-text-content div,
+.service-text-content span {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+    font-weight: 300;
+}
+
+/* Service list parent column styling */
+.service-hero-section .col-lg-6:last-child {
+    margin-top: 2rem;
+}
+
+/* Make these selectors more specific to the education page */
+.service-hero-section .service-list {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 200;
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-hero-section .service-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 1px;
+}
+
+.service-hero-section .service-list li:before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--dark-color);
+    font-weight: 400;
+}
+
+.service-num {
+    color: var(--light-gray-2);
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+/* Common styles for service descriptions */
+.service-desc,
+.ai-pages .service-description,
+.service-description {
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: 0.9px;
+    line-height: 1.4;
+    opacity: 1;
+    overflow: visible;
+    max-height: 100%;
+    width: 95%;
+}
+
+.service-desc {
+    padding-top: 0;
+    text-indent: 26%;
+}
+
+.ai-pages .service-title {
+    margin-top: 60px;
+}
+
+/* STEM Section Styling */
+/* section.service-hero-section:nth-of-type(2) {
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+} */
+
+section.service-hero-section:nth-of-type(2) .service-list {
+    margin-top: 1rem;
+}
+
+section.service-hero-section:nth-of-type(2) .col-lg-6:last-child {
+    margin-top: 0;
+}
+
+section.service-hero-section:nth-of-type(2) .service-list li p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+@media (max-width: 767px) {
+    section.service-hero-section:nth-of-type(2) .col-lg-6:last-child {
+        margin-top: 2rem;
+    }
+    
+    .service-text-content {
+        padding: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .service-text-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .service-desc,
+    .ai-pages .service-description,
+    .service-description {
+        font-size: 1.6rem;
+    }
+}
+
+/* K-12 International Schools Section Styling */
+section.service-hero-section:nth-of-type(3) .service-list {
+    margin-top: 0;
+}
+
+/* Sub-section styling */
+.sub-section {
+    margin-top: 30px !important;
+}
+
+.heading .service-list .link-container a.active i {
+    transform: rotate(45deg);
+    display: inline-block; /* Needed for transform to work */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .service-hero-section .col-lg-6:last-child {
+        margin-top: 2rem;
+    }
+    
+    section.service-hero-section .row {
+        padding: 1rem 0;
+    }
+}
