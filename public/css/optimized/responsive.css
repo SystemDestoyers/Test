@@ -15,6 +15,17 @@
     display: none;
 }
 
+
+/* Vue-specific heading - only applies at 1920px width and above */
+@media (max-width: 1920px) {
+    body[data-vue-app="true"] .heading {
+        height: 60vh;
+    }
+    .about-section {
+        margin-top: 8rem;
+    }
+}
+
 /* ==========================================
    EXTRA LARGE SCREENS (max-width: 1600px)
    ========================================== */
@@ -24,23 +35,156 @@
     .container {
         max-width: 1400px !important;
     }
+    .section-title {
+        font-size: 3rem;
+    }
 
+    /* Header Elements */
+    .main-heading {
+        font-size: 2.6rem;
+        font-weight: 600;
+    }
+    
+    /* Vue-specific main heading style */
+    body[data-vue-app] .main-heading {
+        font-size: 3rem;
+    }
+    
+    .header-image {
+        padding-bottom: 17px;
+    }
+    
+    .heading .services-menu h3 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+    
+    .service-list li {
+        font-size: 1.5rem;
+        font-weight: 200;
+        margin: 0.9rem 0;
+    }
+    
+    /* Navigation and Buttons */
+    .navbar-nav .nav-item {
+        padding-right: 7rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 1.4rem;
+    }
+    
+    .btn-talk {
+        font-size: 1.4rem;
+        width: 270px;
+        height: 48px;
+    }
+    
+    .logo {
+        width: 200px;
+    }
+    
+    .about-text {
+        font-size: 2.2rem;
+        max-width: 1200px;
+    }
+    .about-main-description {
+        /* padding-top: 2rem; */
+        font-size: 1.4rem;
+    }
     /* About Section - Large Desktop */
     .about-section .section-title span {
         font-size: 9rem;
     }
     
+    .about-section .section-title {
+        font-size: 3.5rem;
+        font-weight: var(--font-weight-semibold);
+    }
+    
     .about-image-main {
-        width: 580px;
+        width: 550px;
         height: 340px;
     }
     
     .about-image-secondary {
-        width: 310px;
+        width: 280px;
         height: 380px;
     }
+    
     .about-section .about-heading img {
         left: 16rem;
+    }
+    
+    /* Service Content */
+    .service-content {
+        padding: 6% 0 0 6%;
+    }
+    
+    .service-content .service-number {
+        font-size: 6.5rem;
+        margin-bottom: 0;
+    }
+    .service-name {
+        font-size: 2rem;
+    }
+    .service-num {
+        font-size: 4.7rem;
+    }
+    .service-item.active .service-desc {
+        font-size: 1.5rem;
+    }
+    .service-toggle {
+        font-size: 2.5rem;
+    }
+    .service-title {
+        font-size: 2.6rem;
+    }
+    
+    .service-description {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-content .main-content {
+        font-size: 1.3rem;
+    }
+    
+    .service-buttons {
+        margin-top: 1rem;
+    }
+    
+    
+    .service-buttons .learn-more, .learn-more {
+        max-width: 200px;
+        font-size: 1.3rem;
+    }
+
+    body[data-vue-app="true"] .heading {
+        height: 87vh;
+    }
+
+    /* Vue-specific service text content styles */
+    body[data-vue-app] .service-text-content h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+    
+    body[data-vue-app] .service-text-content .service-list {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    body[data-vue-app] .service-text-content .service-list li {
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 0.4rem;
+    }
+    
+    .service-desc, .ai-pages .service-description, .service-description {
+        font-size: 1.3rem;
     }
 }
 
@@ -48,30 +192,75 @@
    LARGE SCREENS (max-width: 1400px)
    ========================================== */
 
-@media (max-width: 1400px) {
+@media (max-width: 1366px) {
+    .container {
+        max-width: 1200px !important;
+    }
+    body[data-vue-app="true"] .heading {
+        height: 80vh;
+    }
+
+    /* Fix for Vue app services-menu positioning */
+    body[data-vue-app] .heading .services-menu {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .navbar-nav .nav-item {
+        padding-right: 5.5rem;
+    }
+    .navbar-nav .nav-link {
+        font-size: 1.25rem;
+    }
+    .btn-talk {
+        font-size: 1.25rem;
+        width: 240px;
+        height: 45px;
+    }
+    .logo {
+        width: 190px;
+    }
+
+    .carousel-nav-numbers {
+        padding: 0;
+    }
+
+    .nav-number {
+        font-size: 1.8rem;
+    }
+
+    /* Vue-specific styles at 1366px */
+    body[data-vue-app] .header-image {
+        padding-bottom: 0;
+    }
+
+    /* Vue-specific main heading style */
+    body[data-vue-app] .main-heading {
+        font-size: 2.8rem;
+    }
+    
+    /* Vue-specific service text content styles */
+    body[data-vue-app] .service-text-content {
+        padding: 0px 10px;
+        width: 100%;
+    }
+
     /* Header Elements */
     .main-heading {
-        font-size: 3.5rem;
+        font-size: 2.7rem;
+        /* height: 34%; */
+    }
+    .heading .services-menu h3 {
+        font-size: 2rem;
+        margin-bottom: 0;
     }
     
-    .services-menu h3 {
-        font-size: 2.25rem;
-    }
-    
-    .service-list li {
+    .service-list li,
+    .heading .service-list li {
         font-size: 1.25rem;
     }
     
-    .navbar-nav .nav-item {
-        padding-right: 4rem;
-    }
-
-    /* Service Images */
-    .service-image {
-        height: 800px;
-        margin-top: 110px;
-    }
-
+    
     /* About Section - Medium Desktop */
     .about-section {
         margin-top: 100px;
@@ -87,21 +276,135 @@
     }
     
     .about-image-main {
-        width: 550px;
+        width: 480px;
         height: 320px;
     }
     .about-section .about-heading img {
-        left: 200px;
+        left: 15rem;
+        width: 450px;
+        height: auto;
     }
+    /* .about-section .section-title {
+        font-size: 3.2rem;
+    } */
     
     .about-image-secondary {
-        width: 300px;
-        height: 350px;
+        width: 42%;
+        height: 18rem;
         top: 40px;
     }
     
     .about-main-description {
-        padding-top: 2rem;
+        /* padding-top: 2rem; */
+        font-size: 1.2rem;
+    }
+
+    .service-content .service-number {
+        font-size: 6rem;
+    }
+    .service-content .title { 
+        margin-bottom: 0;
+    }
+    .service-title {
+        font-size: 2.2rem;
+    }
+    .service-description {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .service-content .main-content {
+        font-size: 1.1rem;
+    }
+
+    .service-desc, .ai-pages .service-description, .service-description {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+    .service-item {
+        padding: 10px 0;
+    }
+    .service-name {
+        font-size: 1.8rem;
+    }
+    .service-num {
+        font-size: 4.5rem;
+    }
+    .service-item.active .service-desc {
+        font-size: 1.2rem;
+    }
+    .service-toggle {
+        font-size: 2.2rem;
+    }
+    .service-content-wrapper .learn-more {
+        font-size: 1.2rem;
+    }
+    .service-buttons .learn-more, .learn-more {
+        max-width: 180px;
+        font-size: 1.2rem;
+    }
+    .service-buttons {
+        margin-top: 0;
+    }
+
+
+
+
+    .contact-tagline {
+        font-size: 2rem;
+    }
+    .let-talk {
+        font-size: 2.7rem;
+    }
+    .footer-logo .logo {
+        width: 160px;
+    }
+    .location-title {
+        font-size: 1.7rem;
+    }
+    .location-address {
+        font-size: 1rem;
+    }
+    .form-control {
+        font-size: 1rem;
+    }
+    .form-label {
+        font-size: 1rem;
+    }
+    .btn-send {
+        margin-top: 0;
+    }
+    .copyright {
+        font-size: 1rem;
+    }
+    .social-link {
+        font-size: 1rem;
+    }
+    .social-link i {
+        font-size: 1rem;
+    }
+    
+    /* Vue-specific service text content styles */
+    body[data-vue-app] .service-text-content h2 {
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+    
+    body[data-vue-app] .service-text-content .service-list {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    
+    body[data-vue-app] .service-text-content .service-list li {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 0.5;
+    }
+    .service-text-content p {
+        font-size: 1rem;
     }
 }
 
@@ -110,10 +413,20 @@
    ========================================== */
 
 @media (max-width: 1200px) {
+    .container {
+        max-width: 1080px !important;
+    }
+    body[data-vue-app="true"] .heading {
+        height: 87vh;
+    }
     /* About Section - Small Desktop */
     .about-section {
         margin-top: 80px;
         padding: 20px 0 60px;
+    }
+    
+    .about-section .section-title {
+        font-size: 2.6rem;
     }
     
     .about-section .section-title span {
@@ -136,8 +449,14 @@
     }
     
     .about-image-main {
-        width: 480px;
+        width: 460px;
         height: 280px;
+    }
+    
+    .about-section .about-heading img {
+        left: 11rem;
+        width: 400px;
+        height: auto;
     }
     
     .about-image-secondary {
@@ -154,6 +473,56 @@
         padding-top: 1.5rem;
         font-size: 1.1rem;
     }
+    body[data-vue-app] .service-text-content .service-list li {
+        font-size: 0.9rem;
+    }
+    
+    /* Vue-specific styles at 1200px */
+    body[data-vue-app] .header-image {
+        padding-bottom: 10px;
+    }
+    
+    /* Service content */
+    .service-content {
+        padding: 1.5rem;
+    }
+    
+    .service-title {
+        font-size: 2rem;
+    }
+    
+    .service-description {
+        font-size: 1rem;
+    }
+    
+    .service-buttons {
+        margin-top: 0.5rem;
+    }
+    
+    .service-buttons .learn-more, .learn-more {
+        max-width: 170px;
+        font-size: 1.1rem;
+    }
+    
+    .service-content .service-number {
+        font-size: 5rem;
+    }
+    
+    .section-title {
+        font-size: 2.4rem;
+    }
+    
+    .service-title {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+    
+    .main-content .service-description {
+        font-size: 0.8rem;
+        height: auto;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
 }
 
 /* ==========================================
@@ -161,158 +530,251 @@
    ========================================== */
 
 @media (max-width: 992px) {
+    .container {
+        max-width: 940px !important;
+    }
+    .scroll-indicator-container {
+        display: none;
+    }
+    
     /* Header Elements */
     .main-heading {
-        font-size: 2.5rem;
-        max-height: none;
-        padding-top: 1rem;
+        font-size: 1.8rem;
     }
     
-    .header-image {
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-        height: 500px;
-        position: relative;
-        z-index: 1;
+    /* Vue-specific styles at 992px */
+    body[data-vue-app] .header-image {
+        padding-bottom: 5px;
     }
     
-    .services-menu {
-        margin-top: 2rem;
+    /* Fix column ordering at 992px */
+    .heading .left-col {
+        order: 1 !important;
     }
     
-    .services-menu h3 {
-        font-size: 2.25rem;
+    .header-main-carousel {
+        order: 2 !important;
     }
     
-    /* Button Styles */
-    .navbar-collapse .btn-talk {
-        display: none; /* Hide the button in navbar */
+    /* Service content */
+    .service-content .service-number {
+        font-size: 4.5rem;
     }
     
-    /* Show button in services menu on small screens */
-    .heading .services-menu .btn-talk {
-        display: flex;
-        width: 100%;
-        margin-top: 2rem;
+    .section-title {
+        font-size: 2.2rem;
     }
     
-    /* Add button after services menu */
-    .heading .services-menu::after {
-        content: "";
-        display: block;
-        margin-top: 1.5rem;
+    .service-title {
+        font-size: 2rem;
     }
     
-    /* Navigation */
-    .navbar {
-        position: relative;
-        z-index: 1050;
+    .service-description {
+        font-size: 0.9rem;
     }
     
-    .navbar-collapse {
-        background-color: var(--light-color);
-        padding: 1rem;
-        border-radius: 0 0 5px 5px;
-        /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
-        position: absolute;
-        top: 100px;
-        left: 0;
-        right: 0;
-        z-index: 1050;
+    .main-content .service-description {
+        font-size: 0.75rem;
     }
     
-    .navbar-collapse.show, 
-    .navbar-collapse.collapsing {
-        display: block;
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        z-index: 1050;
-        width: 100%;
-        transition: all 0.3s ease;
-        max-height: 80vh;
-        overflow-y: auto;
-    }
-    
-    .navbar-nav .nav-item {
-        padding-right: 0;
-        margin-bottom: 0.5rem;
-    }
-    
-    .logo {
-        width: 180px;
-        height: auto;
-    }
-    
-    /* Carousel */
-    #headerCarousel, 
-    #headerCarousel .carousel-inner, 
-    #headerCarousel .carousel-item {
-        height: 100%;
-        min-height: 400px;
-    }
-
-    /* Service Images */
-    .service-image {
-        height: 600px;
-        min-height: 400px;
-    }
-
-    /* About Section - Tablet Landscape */
-    .about-section {
-        margin-top: 60px;
-        padding: 20px 0 40px;
-    }
-    
+    /* About Section */
     .about-section .section-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
     }
     
     .about-section .section-title span {
         font-size: 5rem;
-        top: -0.3em;
-        left: 0.2em;
     }
     
     .about-text {
         font-size: 1.5rem;
-        max-width: 100%;
-        width: 100%;
     }
     
-    .about-image-container {
-        margin-top: 0;
-        margin-bottom: 3rem;
-        height: auto;
-        /* min-height: 400px; */
-    }
-    
-    .about-image-wrapper {
-        height: 400px;
+    .about-section .about-heading img {
+        left: 6rem;
+        width: 350px;
     }
     
     .about-image-main {
-        float: none;
-        width: 100%;
-        max-width: 500px;
-        height: 300px;
-        margin: 0 auto;
+        width: 400px;
+        height: 220px;
     }
     
     .about-image-secondary {
-        position: absolute;
-        width: 70%;
-        max-width: 350px;
-        height: 250px;
-        left: 50%;
-        top: -50px;
-        transform: translateX(-50%);
+        width: 200px;
+        height: 240px;
+        left: -20px;
+        top: 50px;
+    }
+    .about-image-wrapper {
+        height: 240px;
+    }
+    
+    
+    .about-description {
+        font-size: 0.9rem;
+    }
+
+    /* Educational Services */
+    .service-num {
+        font-size: 4rem;
+    }
+    
+    .service-name {
+        font-size: 1.4rem;
+    }
+    
+    .service-desc {
+        font-size: 0.9rem;
+    }
+    
+    .service-item.active .service-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    .service-toggle {
+        font-size: 1.8rem;
+    }
+    
+    .service-content-wrapper .learn-more {
+        font-size: 0.9rem;
     }
     
     .about-main-description {
         padding-top: 0;
+        font-size: 1rem;
+    }
+
+    /* Carousel Navigation */
+    .nav-number {
+        font-size: 1.7rem;
+    }
+    .heading .services-menu {
+        bottom: 0;
+    }
+    .services-section .main-content {
+        padding-left: 50px;
+    }
+    /* Vue-specific services menu styles */
+    body[data-vue-app] .services-menu h3 {
+        font-size: 1.8rem;
+    }
+    
+    body[data-vue-app] .service-list {
+        margin-top: 1rem;
+    }
+    
+    body[data-vue-app] .service-list li {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    body[data-vue-app] .service-text-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
+    body[data-vue-app] .service-text-content  .service-list {
+        margin-bottom: 0;
         margin-top: 0;
+    }
+    body[data-vue-app] .service-text-content  .service-list li {
+        font-size: 1rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+    }
+    
+    body[data-vue-app] .service-list li a {
+        font-size: 1.2rem;
+    }
+    
+    body[data-vue-app] .services-menu .btn-talk {
+        font-size: 1.4rem;
+    }
+    
+    .about-image-wrapper {
+        height: 240px;
+    }
+    
+    /* Fix about section column ordering at 992px */
+    .about-section .col-lg-6.order-lg-1 {
+        order: 1 !important;
+    }
+    
+    .about-section .col-lg-6.order-lg-2 {
+        order: 2 !important;
+    }
+    
+    .about-main-description {
+        padding-top: 0;
+        font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .contact-tagline {
+        font-size: 1.5rem;
+    }
+    
+    .let-talk {
+        font-size: 2.2rem;
+    }
+    
+    .location-title {
+        font-size: 1.4rem;
+    }
+    
+    .location-address {
+        font-size: 0.9rem;
+    }
+    
+    .contact-label {
+        font-size: 0.9rem;
+    }
+    
+    .contact-value {
+        font-size: 0.9rem;
+    }
+    
+    .form-control {
+        font-size: 0.9rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .btn-send {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+    
+    .social-link {
+        font-size: 0.9rem;
+    }
+    
+    .copyright {
+        font-size: 0.9rem;
+    }
+
+    /* Vue-specific main heading */
+    body[data-vue-app] .main-heading {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        height: 30%;
+        margin-top: 3rem;
+    }
+
+    .service-desc, .ai-pages .service-description, .service-description {
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+        top: 65px;
+        position: absolute;
+        left: 0;
+        width: 101%;
     }
 }
 
@@ -324,6 +786,15 @@
     /* Scroll Indicator */
     .scroll-indicator-container {
         display: none;
+    }
+
+    /* Column ordering for mobile */
+    .heading .left-col {
+        order: 2 !important;
+    }
+    
+    .header-main-carousel {
+        order: 1 !important;
     }
 
     /* Navigation */
@@ -404,6 +875,14 @@
     .about-image-wrapper {
         height: 315px;
     }
+
+    .navbar-collapse.show, 
+    .navbar-collapse.collapsing {
+        top: 65px;
+        position: absolute;
+        left: 0;
+        width: 101%;
+    }
 }
 
 /* ==========================================
@@ -411,7 +890,6 @@
    ========================================== */
 
 @media (max-width: 576px) {
-    /* Mobile viewport height fix */
     html {
         height: -webkit-fill-available;
     }
@@ -420,35 +898,85 @@
         min-height: 100vh;
         min-height: -webkit-fill-available;
     }
+    section {
+        margin-top: 3rem;
+    }
+    body[data-vue-app="true"] .heading {
+        height: 90vh;
+    }
+    
+    /* Column ordering for mobile */
+    .heading .left-col {
+        order: 2 !important;
+    }
+    
+    .header-main-carousel {
+        order: 1 !important;
+    }
+    
+    /* Hide the navbar Let's Talk button */
+    .navbar .btn-talk,
+    .navbar-nav .btn-talk,
+    .navbar-collapse .btn-talk {
+        display: none !important;
+    }
+    
+    /* Centralize navbar items */
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+    
+    .navbar-nav .nav-item {
+        padding-right: 0;
+        /* margin: 0.75rem 0 !important; */
+        display: block;
+        width: 100%;
+    }
+    
+    .navbar-nav .nav-link {
+        display: inline-block;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        margin: 0 auto;
+        font-size: 1.4rem;
+    }
+    
+    /* Add margin equivalent to me-3 class */
+    .navbar-nav .me-3 {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
     
     /* 
      * Header Elements - Mobile Specific Adjustments
      * Applied to both Blade templates and Vue components
      */
+     .heading .left-col {
+        position: unset;
+     }
     .main-heading,
     .heading .main-heading {
-        font-size: 1.7rem;
+        font-size: 1.1rem;
         padding: 0;
         height: 11%;
         position: absolute;
         z-index: 10;
-        /* background-color: rgba(255, 255, 255, 0.4); */
-        /* backdrop-filter: blur(2px); */
         width: 80%;
-        left: 8%;
-        top: 25%;
-        /* border-radius: 15px; */
-        /* box-shadow: 0 2px 10px rgb(0 0 0); */
-        /* text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5); */
+        left: 7%;
+        top: 26vh; /* Default value for Blade templates */
         color: #ffffff;
         overflow: visible;
     }
     
-    /* Adjust main heading position for Vue subpages */
-    body[data-vue-app]:not([data-route="/"]) .main-heading,
-    body[data-vue-app]:not([data-route="/"]) .heading .main-heading {
-        top: 25%;
-        font-size: 1.6rem;
+    /* Vue-specific main heading position */
+    body[data-vue-app] .main-heading,
+    body[data-vue-app] .heading .main-heading {
+        top: 19vh;
+        font-size: 1.2rem;
+        height: 15%;
+
     }
     
     .heading .heading-text {
@@ -474,7 +1002,7 @@
     }
     
     .contact-section .let-talk {
-        font-weight: 400;
+        font-weight: 800;
     }
     
     /* Hide the educational services section on mobile - but ONLY in Blade templates, not Vue */
@@ -490,32 +1018,58 @@
     .heading .services-menu,
     .services-menu {
         margin-top: 0;
+        bottom: -20px;
     }
     
     /* Vue-specific services menu adjustment */
     body[data-vue-app] .heading .services-menu,
     body[data-vue-app] .services-menu {
         margin-top: 2rem;
+        top: 37vh;
+        bottom: auto;
     }
     
     .heading .services-menu h3,
     .services-menu h3 {
         margin: 0;
-        font-size: 2.4rem;
+        font-size: 1.7rem;
         font-weight: 400;
     }
     
     .heading .service-list li,
     .service-list li {
-        font-size: 1.2rem !important;
+        font-size: 1rem;
         font-weight: 400;
-        padding-bottom: 0.6rem;
+        padding-bottom: 0.5vh;
+        margin: 2vh 0;
+    }
+    
+    /* Make Vue app service list items match the same style */
+    body[data-vue-app] .service-list li a {
+        font-size: 1rem;
+        font-weight: 400;
+        /* padding-bottom: 0.5vh; */
     }
     
     /* Button Optimization for Mobile */
     .heading .services-menu .btn-talk,
     .services-menu .btn-talk {
         margin-top: 1rem;
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    /* Let's Talk button styling */
+    .btn-talk {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 5px auto 22px auto !important;
+        text-align: center !important;
+        padding: 0 !important;
+        font-size: 1.4rem !important;
     }
     
     /* Carousel Navigation */
@@ -541,7 +1095,8 @@
     }
     
     .navbar {
-        min-height: 80px;
+        min-height: 66px;
+        height: 8vh;
         padding: 0;
     }
     
@@ -551,8 +1106,10 @@
     
     .navbar-collapse.show, 
     .navbar-collapse.collapsing {
-        top: 80px;
-        max-height: 80vh;
+        top: 65px;
+        position: absolute;
+        left: 0;
+        width: 101%;
     }
     
     .navbar-nav .nav-link {
@@ -561,8 +1118,13 @@
     
     /* Header Images */
     .header-image {
-        height: 100%;
+        height: 47%;
         margin-bottom: 0;
+    }
+    
+    /* Vue-specific header image height */
+    body[data-vue-app] .header-image {
+        height: 40%;
     }
     
     /* Header carousel size */
@@ -570,7 +1132,7 @@
     #headerCarousel .carousel-inner,
     #headerCarousel .carousel-item {
         height: 40vh;
-        min-height: 100%;
+        min-height: 40vh;
     }
     
     /* Subpage header height */
@@ -650,7 +1212,7 @@
     
     .service-content .title {
         position: absolute;
-        top: -525px;
+        top: -30rem;
         left: 10px;
         z-index: 5;
         display: flex
@@ -685,9 +1247,9 @@
         order: 2;
         display: inline-flex;
         position: absolute;
-        top: -503px;
+        top: -29rem;
         left: 130px;
-        color: var(--dark-color);
+        color: var(--light-color);
         font-weight: 600;
     }
     
@@ -701,7 +1263,7 @@
     
     .service-stack-item .col-lg-6:last-child {
         order: 2;
-        margin-top: 20px; /* Add space below the image */
+        margin-top: 0; /* Add space below the image */
     }
     
     .service-content {
@@ -736,7 +1298,7 @@
     }
     
     .about-text {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1.2;
     }
     
@@ -760,20 +1322,23 @@
     }
     
     .about-image-secondary {
-        width: 80%;
-        height: 192px;
-        top: -30px;
-        position: relative;
-        overflow: visible;
+        width: 159px;
+        height: 200px;
+        top: 25px;
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        object-position: center;
     }
 
     .about-image-secondary img {
-        position: absolute;
-        width: 50%;
+        width: 100%;
         height: 100%;
-        object-fit: fill;
-        left: -208px;
-        top: 62px;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        display: block;
+        object-position: center;
     }
     
     /* About page specific styles (different from homepage) */
@@ -811,17 +1376,25 @@
         padding-bottom: 0;
     }
 
+    .ai-pages .service-description, .service-description {
+        font-size: 1.2rem;
+    }
+
     /* Service Section Layout - Mobile-specific styles */
-    .main-content .service-buttons {
-        margin-top: 0;
+    .first-service .service-buttons,
+    .service-stack-item[data-service="1"] .service-buttons,
+    .service-buttons {
+        margin-top: 2vh;
     }
     
     .main-content .service-description {
-        font-size: 1.4rem;
-        line-height: 1.4;
-        margin-bottom: 10px;
-        min-height: 150px;
-        margin-top: 20px;
+        font-size: 1.1rem;
+        line-height: 1.2;
+        /* margin-bottom: 10px; */
+        min-height: auto;
+        margin-top: 0;
+        padding: 0;
+
     }
     
     .service-stack-item .row {
@@ -842,9 +1415,9 @@
     .service-item.active .service-desc,
     .service-desc,
     .service-description {
-        font-size: 1.3rem !important;
+        font-size: 1.1rem;
         margin-bottom: 0;
-        line-height: 1.7rem;
+        line-height: 1.2rem;
         padding: 8px;
     }
     
@@ -856,9 +1429,67 @@
     
     .service-hero-section .service-list li {
         padding-bottom: 0 !important;
+        border: none;
     }
     
     section.service-hero-section .row {
         padding: 0 !important;
     }
+}
+
+/* Height-specific adjustment for small screens (600px height or less) */
+@media (max-width: 576px) and (max-height: 600px) {
+    .heading .services-menu, 
+    .services-menu {
+        bottom: 5rem;
+    }
+}
+
+/* Height-based media queries for small screens */
+@media (max-height: 680px) {
+    /* Hide services word in the services-menu heading */
+    .heading .services-menu h3,
+    .services-menu h3 {
+        font-size: 0; /* Hide the text */
+        margin: 0;
+        padding: 0;
+        height: 0;
+    }
+    
+    /* Keep the heading space minimal */
+    .heading .services-menu {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    
+    /* Add more breathing room for the service list */
+    .heading .service-list,
+    .service-list {
+        padding-top: 5px;
+    }
+    .main-content .service-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* @media (max-height: 633px) and (max-width: 576px) {
+    .heading .services-menu,
+    .services-menu{
+        margin: 0;
+        padding: 0;
+        bottom: 2rem;
+    }
+} */
+
+/* Media queries for smaller desktop screens - 1366px */
+@media screen and (max-width: 1366px) {
+    .service-text-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Media queries for tablets */
+@media (max-width: 768px) {
+    /* Add tablet-specific styles here */
 }

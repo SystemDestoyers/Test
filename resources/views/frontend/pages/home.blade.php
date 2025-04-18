@@ -18,7 +18,7 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-6 order-lg-1 order-2 about-main-description">
+                <div class="col-lg-6 col-sm-6 order-lg-1 order-2 about-main-description">
                     <p class="about-description">
                         JADCO and its highly ranked international partners of Companies,
                         Universities and SMEs are forming together an exclusive and
@@ -33,7 +33,7 @@
                         objectives of our clients.
                     </p>
                 </div>
-                <div class="col-lg-6 order-lg-2 order-1 about-image-wrapper">
+                <div class="col-lg-6 col-sm-6 order-lg-2 order-1 about-image-wrapper">
                     <div class="about-image-container">
                         <div class="about-image-main">
                             <img src="{{ asset('images/About_01.jpg') }}" alt="Graduate student" class="img-fluid">
@@ -64,13 +64,13 @@
                 <div class="service-item-wrapper">
                     <div class="container">
                         <div class="row align-items-center full-screen md-h-auto">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-image">
                                     <img src="{{ asset('images/Home_Serv_01.jpg') }}" alt="Classroom setting"
                                         class="img-fluid">
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-content">
                                     <div class="title">
                                         <h2 class="section-title">SERVICES</h2>
@@ -106,13 +106,13 @@
                 <div class="service-item-wrapper">
                     <div class="container">
                         <div class="row align-items-center full-screen md-h-auto">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-image">
                                     <img src="{{ asset('images/Home_Serv_02.jpg') }}" alt="AI Technology"
                                         class="img-fluid">
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-content">
                                     <div class="title">
                                         <h2 class="section-title">SERVICES</h2>
@@ -147,13 +147,13 @@
                 <div class="service-item-wrapper">
                     <div class="container">
                         <div class="row align-items-center full-screen md-h-auto">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-image">
                                     <img src="{{ asset('images/Home_Serv_03.jpg') }}" alt="Gaming and Esports"
                                         class="img-fluid">
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-content">
                                     <div class="title">
                                         <h2 class="section-title">SERVICES</h2>
@@ -186,13 +186,13 @@
                 <div class="service-item-wrapper">
                     <div class="container">
                         <div class="row align-items-center full-screen md-h-auto">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-image">
                                     <img src="{{ asset('images/Home_Serv_04.jpg') }}" alt="Arts and Entertainment"
                                         class="img-fluid">
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-sm-6">
                                 <div class="service-content">
                                     <div class="title">
                                         <h2 class="section-title">SERVICES</h2>
@@ -227,7 +227,7 @@
         <div class="container">
             <div class="row">
                 <div class="educational-services mt-5">
-                    <h3 class="edu-services-title">Educational Services</h3>
+                    <h3 class="edu-services-title section-title">Educational Services</h3>
 
                     <div class="service-item mt-4">
                         <div class="row">

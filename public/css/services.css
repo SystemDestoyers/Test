@@ -3,6 +3,8 @@
  * Formerly education-scholarship.css
  */
 
+
+
 .header-image {
     max-height: 550px;
     width: 100%;
@@ -10,8 +12,8 @@
 }
 
 .heading .left-col {
-    height: 550px;
-    display: flex;
+    max-height: 550px;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
 }
@@ -166,6 +168,7 @@
     position: relative;
     padding-left: 15px;
     margin-bottom: 1px;
+    border: none;
 }
 
 .service-hero-section .service-list li:before {
@@ -273,4 +276,9 @@ section.service-hero-section:nth-of-type(3) .service-list {
     section.service-hero-section .row {
         padding: 1rem 0;
     }
+}
+
+/* End footer adjustments for services pages */
+.end-footer {
+    margin-bottom: 2rem;
 }

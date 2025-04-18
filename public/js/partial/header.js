@@ -7,13 +7,13 @@ $(document).ready(function () {
         const transform = headerImage ? window.getComputedStyle(headerImage).transform : 'null';
         const animation = headerImage ? window.getComputedStyle(headerImage).animation : 'null';
         
-        console.log(
-            `[${timestamp}] [HEADER-IMAGE-DEBUG] ${message}\n` +
-            `  Classes: ${classes}\n` +
-            `  Opacity: ${opacity}\n` +
-            `  Transform: ${transform}\n` +
-            `  Animation: ${animation}`
-        );
+        // console.log(
+        //     `[${timestamp}] [HEADER-IMAGE-DEBUG] ${message}\n` +
+        //     `  Classes: ${classes}\n` +
+        //     `  Opacity: ${opacity}\n` +
+        //     `  Transform: ${transform}\n` +
+        //     `  Animation: ${animation}`
+        // );
     }
     
     // Set up mutation observer to monitor header image changes
@@ -43,7 +43,7 @@ $(document).ready(function () {
             attributeFilter: ['class', 'style']
         });
         
-        console.log('[HEADER] Started header image mutation observer');
+        // console.log('[HEADER] Started header image mutation observer');
         
         // Additional monitoring for the window load event
         window.addEventListener('load', () => {
@@ -137,7 +137,7 @@ $(document).ready(function () {
                     preloader.remove();
                 }, 50); // Reduced from 100ms
             }, 200); // Reduced from 300ms
-        }, 400); // Reduced from 600ms
+        }, 1500); // Reduced from 600ms
     } else {
         // If no preloader, initialize header animations immediately
         initializeHeaderAnimations();
@@ -151,7 +151,7 @@ $(document).ready(function () {
         if (isHomePage) {
             setTimeout(() => {
                 window.debugHeadingTextIssue();
-            }, 500); // Reduced from 1000ms
+            }, 1500); // Reduced from 1000ms
         }
     }
 
@@ -270,7 +270,7 @@ $(document).ready(function () {
                 // First, remove the animate class if it exists
                 if (headerImage.classList.contains('animate')) {
                     headerImage.classList.remove('animate');
-                    console.log('[HEADER] Removed existing animate class from header image');
+                    // console.log('[HEADER] Removed existing animate class from header image');
                     debugHeaderImage('After removing animate class', headerImage);
                 }
                 
@@ -285,7 +285,7 @@ $(document).ready(function () {
                 // Add the animate class after a brief delay to ensure clean animation
                 setTimeout(() => {
                     headerImage.classList.add('animate');
-                    console.log('[HEADER] Added animate class to header image');
+                    // console.log('[HEADER] Added animate class to header image');
                     debugHeaderImage('After adding animate class', headerImage);
                     
                     // Monitor animation completion
@@ -525,25 +525,10 @@ $(document).ready(function () {
     });
      // Function to update the scroll indicator
      function updateScrollIndicator() {
-        const scrollIndicator = document.querySelector('.scroll-indicator');
-        if (!scrollIndicator) return;
+        // Don't implement scroll indicator logic here
+        // This is now handled by fix-scroll.js
         
-        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrolled = (window.scrollY / windowHeight) * 100;
-        
-        // Limit the indicator height to 50px maximum
-        const MAX_HEIGHT_PX = 50;
-        const containerHeight = scrollIndicator.parentElement.offsetHeight;
-        
-        // Calculate percentage that equals 50px
-        const maxHeightPercent = (MAX_HEIGHT_PX / containerHeight) * 100;
-        
-        // Limit scrolled value to maxHeightPercent
-        const limitedScrolled = Math.min(scrolled, maxHeightPercent);
-        
-        scrollIndicator.style.height = `${limitedScrolled}%`;
-        
-        // Check if user is in header section - if yes, add at-top class to body
+        // Only handle the at-top class for navbar styling
         if (window.scrollY < 100) {
             document.body.classList.add('at-top');
         } else {
